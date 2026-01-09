@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-snake"></i> Snake Game</h1>
+        </header>
+        
+        <div class="game-area">
+            <div class="game-info">
+                <div class="score-board">
+                    <div class="score-item">
+                        <span class="score-label">Score</span>
+                        <span id="score" class="score-value">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">High Score</span>
+                        <span id="high-score" class="score-value">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Speed</span>
+                        <span id="speed" class="score-value">Normal</span>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="start-btn" class="btn"><i class="fas fa-play"></i> Start Game</button>
+                    <button id="pause-btn" class="btn"><i class="fas fa-pause"></i> Pause</button>
+                    <button id="reset-btn" class="btn"><i class="fas fa-redo"></i> Restart</button>
+                    
+                    <div class="speed-controls">
+                        <span>Game Speed:</span>
+                        <button id="slow-speed" class="speed-btn">Slow</button>
+                        <button id="normal-speed" class="speed-btn active">Normal</button>
+                        <button id="fast-speed" class="speed-btn">Fast</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-container">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div id="game-over" class="game-over">
+                    <h2>Game Over!</h2>
+                    <p>Your Score: <span id="final-score">0</span></p>
+                    <button id="play-again-btn" class="btn"><i class="fas fa-gamepad"></i> Play Again</button>
+                </div>
+                <div id="game-start" class="game-start">
+                    <h2>Ready to Play?</h2>
+                    <button id="start-game-btn" class="btn start-btn"><i class="fas fa-play-circle"></i> Start Game</button>
+                </div>
+            </div>
+            
+            <div class="mobile-controls">
+                <div class="control-row">
+                    <button class="control-btn" id="up-btn"><i class="fas fa-arrow-up"></i></button>
+                </div>
+                <div class="control-row">
+                    <button class="control-btn" id="left-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button class="control-btn" id="down-btn"><i class="fas fa-arrow-down"></i></button>
+                    <button class="control-btn" id="right-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
